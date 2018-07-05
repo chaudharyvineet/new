@@ -125,7 +125,7 @@ $(window).scroll(function () {
 $(document).ready(function () {
     $("#back2Top").click(function (event) {
         event.preventDefault();
-       $("#ppup").addClass('yu');
+      
         return false;
     });
 
@@ -135,10 +135,10 @@ $(document).ready(function () {
 
 $(window).scroll(function () {
     var height = $(window).scrollTop();
-    if (height > 100) {
+    if (height >1600) {
         $('#b2t').fadeIn();
         $(window).scroll(function(){
-  var threshold = 200; // number of pixels before bottom of page that you want to start fading
+  var threshold = 100; // number of pixels before bottom of page that you want to start fading
   var op = (($(document).height() - $(window).height()) - $(window).scrollTop()) / threshold;
 	if( op <= 0 ){
 		$("#b2t").hide();
@@ -154,10 +154,8 @@ $(window).scroll(function () {
 $(document).ready(function () {
     $("#b2t").click(function (event) {
         event.preventDefault();
-        $("#ppup").css("opacity", "1");
-        $("#ppup").css("transition", "all 1s ease-out");
-        $("#ppup").css("height", "450px");
-        return false;
+        $(".popup").toggleClass("popup1");
+        
     });
 
 });
@@ -167,10 +165,10 @@ $(document).ready(function () {
 
 $(window).scroll(function () {
     var height = $(window).scrollTop();
-    if (height > 100) {
+    if (height > 1600) {
         $('#b2c').fadeIn();
         $(window).scroll(function(){
-  var threshold = 200; // number of pixels before bottom of page that you want to start fading
+  var threshold = 100; // number of pixels before bottom of page that you want to start fading
   var op = (($(document).height() - $(window).height()) - $(window).scrollTop()) / threshold;
 	if( op <= 0 ){
 		$("#b2c").hide();
@@ -187,9 +185,6 @@ $(document).ready(function () {
     $("#b2c").click(function (event) {
         event.preventDefault();
        $("#b2t").hide();
-      $("#ppup").css("opacity", "0");
-        $("#ppup").css("transition", "all 1s ease-out");
-        $("#ppup").css("height", "0px");
         return false;
     });
 
